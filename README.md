@@ -1,47 +1,42 @@
-# Coasight: Shoreline Change Analysis Using Satellite Imagery
+# CoaSight: Accessible Shoreline Change Analysis
 
-Coasight is a Python-based project that analyzes shoreline changes over time using Sentinel-2 satellite imagery. The project employs advanced image processing techniques and geospatial tools to monitor coastal erosion and forecast future shoreline positions, supporting sustainable coastal management efforts.
+CoaSight is a user-friendly tool designed to empower coastal communities with actionable insights into shoreline erosion. By leveraging satellite data and advanced image processing, CoaSight provides clear risk assessments, historical trends, and future predictions to help individuals, farmers, and small businesses make informed decisions.
 
-## Key Features
+## Features
 
-- **Satellite Data Processing**:
-  - Utilized **Google Earth Engine** to filter Sentinel-2 imagery with less than 20% cloud cover and generate RGB composites for analysis.
-- **Shoreline Detection**:
-  - Applied **OpenCV's Canny Edge Detection Algorithm** to identify shoreline boundaries in satellite images.
-- **Data Analysis**:
-  - Calculated retreat rates, average shoreline positions, and percentage changes across multiple time periods.
-  - Forecasted future shoreline positions using historical trend analysis.
-- **Visualization**:
-  - Created overlay maps and visualized shoreline changes over time using **ArcGIS** and Python-based plotting libraries.
+- **Clear Risk Assessments**: Input a location to receive a detailed risk score showing how erosion may impact homes, farms, or businesses.
+- **Trends and Predictions**: Visualize how shorelines have shifted over time and predict future changes to enable proactive planning.
+- **Interactive Maps and Graphs**: Explore erosion trends and at-risk zones with intuitive visuals.
+- **Practical Advice**: Get tailored recommendations for mitigating erosion risks.
+
+## How It Works
+
+1. **Satellite Data Collection**:
+   - Uses **Google Earth Engine** to extract Sentinel-2 imagery of coastal areas.
+   - Filters images with less than 20% cloud coverage for clarity.
+2. **Image Processing**:
+   - Converts GeoTIFF images to JPG using **Rasterio** and **NumPy** for easier handling.
+3. **Shoreline Detection**:
+   - Employs **Canny Edge Detection** in **OpenCV** to identify the land-water boundary.
+4. **Change Measurement**:
+   - Tracks X/Y position shifts, total land depletion, and annual retreat rates.
+5. **Data Visualization**:
+   - Generates graphs and overlay maps with **Matplotlib** to highlight long-term erosion trends.
+6. **Future Predictions**:
+   - Forecasts shoreline positions up to 2030 based on historical trends.
 
 ## Technologies Used
 
-- **Python**: Core programming language for data processing and analysis.
-- **Google Earth Engine**: For satellite imagery filtering and composite generation.
-- **OpenCV**: For edge detection and shoreline boundary extraction.
-- **ArcGIS**: For advanced geospatial visualization.
-- **Matplotlib & NumPy**: For data visualization and statistical analysis.
+- **Google Earth Engine**: Satellite imagery extraction and preprocessing.
+- **OpenCV**: Shoreline detection using Canny Edge Detection.
+- **Rasterio** and **NumPy**: Image standardization and processing.
+- **Matplotlib**: Graphs and visual overlays for data interpretation.
+- **Python**: Core programming language for analysis and modeling.
 
-## Results
+## Why CoaSight?
 
-- Successfully quantified shoreline retreat rates and forecasted changes with high accuracy.
-- Developed visual overlays to highlight shoreline changes across years, aiding in understanding erosion patterns.
-
-## Usage
-
-To replicate the analysis, you will need:
-1. Access to **Google Earth Engine** for Sentinel-2 imagery.
-2. Python environment with the following libraries installed:
-   - `OpenCV`
-   - `NumPy`
-   - `Matplotlib`
-3. Optional: Access to **ArcGIS** for enhanced geospatial visualization.
-
-## Future Work
-
-- Extend the analysis to additional coastal regions globally.
-- Integrate machine learning models for automated erosion pattern prediction.
+CoaSight bridges the gap between technical shoreline data and practical decision-making for non-experts. By transforming complex datasets into accessible, actionable insights, CoaSight empowers communities to safeguard their coastlines against erosion and environmental risks.
 
 ---
 
-Feel free to explore the code and contribute to improving Coasight! 🌍
+Explore the repository to see how CoaSight is making a difference in coastal resilience! 🌍
